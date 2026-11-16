@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UNIQLO</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=favorite,home,search,account_circle,shopping_cart,dehaze"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=favorite,home,search,account_circle,shopping_cart,dehaze,arrow_forward_ios,arrow_back_ios"
       rel="stylesheet"
     />
     <link rel="favicon" type="image/svg+xml" href="../images/favicon.svg">
@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
         <header class="header">
@@ -46,7 +48,7 @@
       </div>
     </header>
     <!-- header end -->
-      <div class="main-visual">
+      <div class="main-visual swiper">
       <ul class="visual-list swiper-wrapper">
         <li class="visual visual01 swiper-slide"></li>
         <li class="visual visual02 swiper-slide"></li>
@@ -61,5 +63,18 @@
       </button>
       <div class="pagination"></div>
     </div>
+    <script>
+        const swiper = new Swiper('.main-visual', {
+    speed: 1000,
+    effect: "fade",
+    loop: true,
+    autoplay: {
+      delay: 700,
+      disableOnInteraction: false,  // 사용자가 클릭 후에도 계속 자동재생
+    },
+    navigation: { nextEl: '.btn-next', prevEl: '.btn-prev' },
+    pagination: { el: '.pagination', clickable: true },
+  });
+    </script>
 </body>
 </html>    <header class="header">
